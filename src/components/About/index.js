@@ -19,7 +19,11 @@ const About = () => {
                      in computer science principles and a deep love for technology innovation.
                 </p>
                 <p>
-                    aa
+                    During my academic journey, I had the opportunity to delve into the world of computer science research 
+                    as a Research Intern at the CSE Enrichment Program. Collaborating closely with Professor Joanna Silvia, 
+                    I contributed significantly to the development of a Named Entity Recognition (NER) model, showcasing my 
+                    proficiency in Python. My ability to analyze complex problems and craft innovative solutions is at the core 
+                    of my approach to technology.
                 </p>
                 <p>
                     I am eager to leverage my skills and experiences in a dynamic and innovative environment, 
