@@ -1,6 +1,5 @@
 import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import Loader from 'react-loaders'
 
 const About = () => {

@@ -1,33 +1,35 @@
 import './index.scss';
 import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
-import { useState, useEffect, useRef } from 'react';
+// import AnimatedLetters from '../AnimatedLetters';
+import { useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com'; // Change the import to use emailjs-com instead of @emailjs/browser
 
 const Contact = () => {
-    const [letterClass, setLetterClass] = useState('text-animate');
+    // const [letterClass, setLetterClass] = useState('text-animate');
     const refForm = useRef();
 
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            setLetterClass('text-animate-hover');
-        }, 3000);
+    // useEffect(() => {
+    //     const timeoutId = setTimeout(() => {
+    //         setLetterClass('text-animate-hover');
+    //     }, 3000);
 
-        return () => clearTimeout(timeoutId);
-    }, []);
+    //     return () => clearTimeout(timeoutId);
+    // }, []);
 
     useEffect(() => {
         // Bind the submit event to the form after component mounts
-        if (refForm.current) {
-            refForm.current.addEventListener('submit', sendEmail);
+        const currentRefForm = refForm.current;
+        if (currentRefForm) {
+            currentRefForm.addEventListener('submit', sendEmail);
         }
         // Cleanup function to remove event listener when component unmounts
         return () => {
-            if (refForm.current) {
-                refForm.current.removeEventListener('submit', sendEmail);
+            if (currentRefForm) {
+                currentRefForm.removeEventListener('submit', sendEmail);
             }
         };
-    }, []);
+    }, []); // Empty dependency array to run effect only once
+    
 
     const sendEmail = (e) => {
         e.preventDefault();

@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/logo-s.png'
+// import AnimatedLetters from '../AnimatedLetters'
+// import LogoTitle from '../../assets/images/logo-s.png'
 import './index.scss'
 
 const Home = () => {
-    const [letterClass, setLetterClass] = useState('text-animate');
-    const nameArray = [' ', 'E', 'm', 'm', 'a', 'n', 'u', 'e', 'l'];
+    // const [letterClass, setLetterClass] = useState('text-animate');
+    // const nameArray = [' ', 'E', 'm', 'm', 'a', 'n', 'u', 'e', 'l'];
 
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            setLetterClass('text-animate-hover');
-        }, 4000);
+    // useEffect(() => {
+    //     const timeoutId = setTimeout(() => {
+    //         setLetterClass('text-animate-hover');
+    //     }, 4000);
 
-        // Cleanup function to clear the timeout
-        return () => clearTimeout(timeoutId);
-    }, []);
+    //     // Cleanup function to clear the timeout
+    //     return () => clearTimeout(timeoutId);
+    // }, []);
 
     return (
         <>
